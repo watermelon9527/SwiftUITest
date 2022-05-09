@@ -8,45 +8,105 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
+        ScrollView {
         VStack {
-            MyView()
+            Color.blue
+                .ignoresSafeArea()
+
+            Image("TODDD")
+                .scaledToFit()
+                .padding()
+
+            Button {
+
+            } label: {
+                ZStack {
+                    Capsule()
+                        .tint(.gray)
+                        .frame(height: 45)
+                    Text("Sign in with TODDD")
+                        .foregroundColor(Color.white)
+                }
+                
+                .background(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.white)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous)
+                        .strokeBorder(Color.white, lineWidth: 1)
+                )                        .padding()
+            }
+
+
+            Button {
+
+            } label: {
+                ZStack {
+                    Capsule()
+                        .tint(.gray)
+                        .frame(height: 45)
+                    Text("Sign in with Facebook")
+                        .foregroundColor(Color.white)
+                }
+                .background(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.white)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous)
+                        .strokeBorder(Color.white, lineWidth: 1)
+                )                        .padding()
+            }
+
+            Button {
+
+            } label: {
+                ZStack {
+                    Capsule()
+                        .tint(.gray)
+                        .frame(height: 45)
+                    Text("Sign in with Google")
+                        .foregroundColor(Color.white)
+                }
+                .background(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.white)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous)
+                        .strokeBorder(Color.white, lineWidth: 1)
+                )                        .padding()
+            }
+
+            Button {
+
+            } label: {
+                ZStack {
+                    Capsule()
+                        .tint(.gray)
+                        .frame(height: 45)
+                    Text("Sign in with Apple")
+                        .foregroundColor(Color.white)
+                }
+                .background(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous).fill(Color.white)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 50, style: .continuous)
+                        .strokeBorder(Color.white, lineWidth: 1)
+                )                        .padding()
+            }
+
+
         }
+        }
+        .background(.brown)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct MyView: View {
-    var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Image("TODDD")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .overlay(
-                    Color.black
-                        .opacity(0.4)
-                        .overlay(
-
-                            Text("gogogo, world,gogogo, world,gogogo, world")
-                                .fontWeight(.bold)
-                                .font(.title)
-                                .foregroundColor(.black)
-                            //                    .background(Color.white)
-                                .rotation3DEffect(.degrees(60), axis: (x: 1 , y:0, z:0))
-                            //                    .shadow(color: .gray, radius: 2, x: 0, y: 15)
-                                .padding(),
-
-                            alignment: .top
-                        )
-                )
-            Image("TODDD")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-        }
     }
 }
